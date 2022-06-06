@@ -1,0 +1,118 @@
+<h2>ADDRESS</h2>
+<section class="user-dashboard page-wrapper">
+  <div class="container">
+    <div class="row">
+      <div class="col-12 col-md-7 col-sm-12 col-lg-9">
+        <div class="acccount-settings" id="tab">
+          <h4 class="mb-4"></h4>
+          <form (ngSubmit)="saveAddress()">
+            <div class="form-row">
+              <div class="col-lg-6">
+                <div class="form-group">
+                  <label>DOOR NUMBER</label>
+                  <input
+                    type="number"
+                    class="form-control"
+                    name="doorno"
+                    placeholder="Enter Your Door Number"
+                    [(ngModel)]="address.doorno"
+                  />
+                </div>
+              </div>
+
+              <div class="col-lg-6">
+                <div class="form-group">
+                  <label>NAME</label>
+                  <input
+                    type="text"
+                    class="form-control"
+                    name="name"
+                    placeholder="Enter Your Name"
+                    [(ngModel)]="address.name"
+                  />
+                </div>
+              </div>
+              <div class="col-lg-6">
+                <div class="form-group">
+                  <label>StreetName</label>
+                  <input
+                    type="text"
+                    class="form-control"
+                    name="streetname"
+                    placeholder="Enter Your StreetName"
+                    [(ngModel)]="address.streetname"
+                  />
+                </div>
+              </div>
+
+              <div class="col-lg-6">
+                <div class="form-group">
+                  <label>LANDMARK</label>
+                  <input
+                    type="text"
+                    class="form-control"
+                    name="landmark"
+                    placeholder="Enter Your LandMark"
+                    [(ngModel)]="address.landmark"
+                  />
+                </div>
+              </div>
+              <div class="col-lg-6">
+                <div class="form-group">
+                  <label>CITY</label>
+                  <input
+                    type="text"
+                    class="form-control"
+                    name="city"
+                    placeholder="Enter Your City"
+                    [(ngModel)]="address.city"
+                  />
+                </div>
+              </div>
+
+              <div class="col-lg-6">
+                <div class="form-group">
+                  <label>PINCODE</label>
+                  <input
+                    type="number"
+                    class="form-control"
+                    name="pincode"
+                    placeholder="Enter Your Pincode"
+                    [(ngModel)]="address.pincode"
+                  />
+                </div>
+              </div>
+              <div class="col-lg-6">
+                <div class="form-group">
+                  <label>State</label>
+                  <input
+                    type="text"
+                    class="form-control"
+                    name="state"
+                    placeholder="Enter Your State"
+                    [(ngModel)]="address.state"
+                  />
+                </div>
+              </div>
+
+              <div class="col-lg-6">
+                <div class="form-group">
+                  <label>MOBILE NUMBER</label>
+                  <input
+                    type="number"
+                    class="form-control"
+                    name="phonenumber"
+                    placeholder="Enter Your Mobile Number"
+                    [(ngModel)]="address.phonenumber"
+                  />
+                </div>
+              </div>
+            </div>
+
+            <button class="btn btn-dark">Save Changes</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,77 @@
+<div class="container mt-5 p-3 rounded cart">
+  <div class="row no-gutters">
+    <div class="col-md-8">
+      <div class="product-details mr-2">
+        <div class="d-flex flex-row align-items-center">
+          <i class="fa fa-long-arrow-left"></i
+          ><span class="ml-2">Continue Shopping</span>
+        </div>
+        <hr />
+        <h6 class="mb-0">Shopping cart</h6>
+        <div class="d-flex justify-content-between">
+          <span
+            >You have <b>{{ totalproducts }}</b> items in your cart</span
+          >
+          <div class="d-flex flex-row align-items-center">
+            <span class="text-black-50">Sort by:</span>
+            <div class="price ml-2">
+              <span class="mr-1">price</span><i class="fa fa-angle-down"></i>
+            </div>
+          </div>
+        </div>
+
+        <div *ngFor="let item of cartDetails">
+          <div
+            class="d-flex justify-content-between align-items-center mt-3 p-2 items rounded"
+          >
+            <div class="d-flex flex-row">
+              <img class="rounded" src="{{ item.imgsrc }}" width="40" />
+              <div class="ml-2">
+                <span class="font-weight-bold d-block">{{
+                  item.productName
+                }}</span>
+                
+              </div>
+            </div>
+            <div class="d-flex flex-row align-items-center">
+              <span class="d-block">
+                Quantity: {{ item.productQuantity }}
+              </span>
+              <span class="d-block ml-5 font-weight-bold"
+                >&#8377; {{ item.quantityprice }}</span
+              ><i class="fa fa-trash-o ml-3 text-black-50"></i>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="payment-info">
+        <div class="d-flex justify-content-between align-items-center">
+          <span>Card details</span>
+        </div>
+
+        <hr class="line" />
+        <div class="d-flex justify-content-between information">
+          <span>Subtotal</span><span>{{ totalPrize | currency: "INR" }}</span>
+        </div>
+        <div class="d-flex justify-content-between information">
+          <span>Shipping</span><span>{{ 20.0 | currency: "INR" }} </span>
+        </div>
+        <div class="d-flex justify-content-between information">
+          <span>Total(Incl. taxes)</span
+          ><span> {{ totalPrize + 20 | currency: "INR" }}</span>
+        </div>
+        <button
+          class="btn btn-primary btn-block d-flex justify-content-between mt-3"
+          type="button"
+          #PaymentValue
+          (click)="startPayment()"
+        >
+          <span> {{ totalPrize + 20 | currency: "INR" }}</span
+          ><span>Buy Now<i class="fa fa-long-arrow-right ml-1"></i></span>
+        </button>
+      </div>
+    </div>
+  </div>
+</div>

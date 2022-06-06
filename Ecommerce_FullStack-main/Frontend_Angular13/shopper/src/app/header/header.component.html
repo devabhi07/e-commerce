@@ -1,0 +1,48 @@
+<nav
+  class="navbar navbar-expand-lg navbar-light bg-white w-100 navigation"
+  id="navbar"
+>
+  <div class="container">
+    <a class="navbar-brand font-weight-bold" routerLink="">Shopper</a>
+
+    <button
+      class="navbar-toggler"
+      type="button"
+      data-toggle="collapse"
+      data-target="#main-navbar"
+      aria-controls="main-navbar"
+      aria-expanded="false"
+      aria-label="Toggle navigation"
+    >
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="main-navbar">
+      <ul class="navbar-nav mx-auto">
+        <li class="nav-item active">
+          <a class="nav-link" routerLink="/shop">Shop </a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link" a routerLink="/cart">Cart</a>
+        </li>
+      </ul>
+    </div>
+    <!-- Navbar-collapse -->
+
+    <ul class="top-menu list-inline mb-0 d-none d-lg-block" id="top-menu">
+      <li class="list-inline-item nav-item dropdown dropdown-slide">
+        <i class="tf-ion-ios-person mr-3"></i>
+        <ul class="dropdown-menu" aria-labelledby="navbarDropdown5">
+          <!-- <li><a routerLink="/dashboard">Dashboard</a></li> -->
+          <li><a routerLink="/order">Orders</a></li>
+          <li><a routerLink="/address">Address</a></li>
+          <li><a routerLink="/profile-details">Profile Details</a></li>
+          <li><a routerLink="/login">Login Page</a></li>
+          <li><a routerLink="/signup">SignUp Page</a></li>
+          <li><a routerLink="/forgot-password">Forgot Password</a></li>
+        </ul>
+      </li>
+    </ul>
+  </div>
+</nav>

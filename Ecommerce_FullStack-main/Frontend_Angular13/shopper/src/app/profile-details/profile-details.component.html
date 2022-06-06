@@ -1,0 +1,212 @@
+<section class="page-header">
+  <div class="overly"></div>
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-lg-6">
+        <div class="content text-center">
+          <h1 class="mb-3">Profile</h1>
+          <p>
+            Hath after appear tree great fruitful green dominion moveth sixth
+            abundantly image that midst of god day multiply you’ll which
+          </p>
+
+          <nav aria-label="breadcrumb">
+            <ol class="breadcrumb bg-transparent justify-content-center">
+              <li class="breadcrumb-item"><a routerLink="/">Home</a></li>
+              <li class="breadcrumb-item active" aria-current="page">
+                Profile
+              </li>
+            </ol>
+          </nav>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="user-dashboard page-wrapper">
+  <div class="container">
+    <div class="row">
+      <div class="col-12 col-md-5 col-sm-12 col-lg-3">
+        <div class="nav flex-column nav-pills">
+          <a class="nav-link" routerLink="/dashboard">Dashboard</a>
+        </div>
+        <div class="nav flex-column nav-pills">
+          <a class="nav-link" routerLink="/profile-details">Orders</a>
+        </div>
+        <div class="nav flex-column nav-pills">
+          <a class="nav-link" routerLink="/profile-details">Downloads</a>
+        </div>
+        <div class="nav flex-column nav-pills">
+          <a class="nav-link" routerLink="/profile-details">Address</a>
+        </div>
+        <div class="nav flex-column nav-pills">
+          <a class="nav-link active" routerLink="/profile-details">Account</a>
+        </div>
+        <div class="nav flex-column nav-pills">
+          <a class="nav-link" routerLink="/" (click)="logOut()">Log Out</a>
+        </div>
+      </div>
+
+      <div class="col-12 col-md-7 col-sm-12 col-lg-9">
+        <div class="tab-pane fade show active" id="settings" role="tabpanel">
+          <div class="acccount-settings">
+            <h4 class="mb-4">Account information</h4>
+            <form (ngSubmit)="registerUser()">
+              <div class="form-row">
+                <div class="col-lg-6">
+                  <div class="form-group">
+                    <label>First Name</label>
+                    <input
+                      matInput
+                      class="form-control"
+                      name="firstname"
+                      placeholder="Enter your First Name"
+                      required
+                      #firstname="ngModel"
+                      [(ngModel)]="user.firstname"
+                    />
+                    <span
+                      *ngIf="firstname.invalid && firstname.touched"
+                      style="color: red"
+                      >Please Enter a Valid First Name</span
+                    >
+                  </div>
+                </div>
+                <div class="col-lg-6">
+                  <div class="form-group">
+                    <label>Last Name</label>
+                    <input
+                      matInput
+                      class="form-control"
+                      name="lastname"
+                      placeholder="Enter Your last Name"
+                      required
+                      #lastname="ngModel"
+                      [(ngModel)]="user.lastname"
+                    />
+                    <span
+                      *ngIf="lastname.invalid && lastname.touched"
+                      style="color: red"
+                      >Please Enter a Valid Last Name</span
+                    >
+                  </div>
+                </div>
+              </div>
+
+              <div class="form-group mb-4">
+                <label>Email address </label>
+                <input
+                  matInput
+                  class="form-control"
+                  name="email"
+                  placeholder="Enter Your Email"
+                  required
+                  #email="ngModel"
+                  [(ngModel)]="user.email"
+                />
+                <span *ngIf="email.invalid && email.touched" style="color: red"
+                  >Please Enter a Valid Email</span
+                >
+              </div>
+              <div class="form-group mb-4">
+                <label>PASSWORD </label>
+                <input
+                  matInput
+                  type="password"
+                  class="form-control"
+                  name="mobilenumber"
+                  placeholder="Enter password if you want to Change"
+                  required
+                  #password="ngModel"
+                  [(ngModel)]="user.password"
+                />
+                <span
+                  *ngIf="password.invalid && password.touched"
+                  style="color: red"
+                  >Please Enter a Valid Password</span
+                >
+              </div>
+              <div class="form-group mb-4">
+                <label>Mobile Number </label>
+                <input
+                  matInput
+                  class="form-control"
+                  name="mobilenumber"
+                  placeholder="Enter Your Mobile Number"
+                  #mobilenumber="ngModel"
+                  [(ngModel)]="user.mobilenumber"
+                />
+                <span
+                  *ngIf="mobilenumber.invalid && mobilenumber.touched"
+                  style="color: red"
+                  >Please Enter a Valid Mobile Number</span
+                >
+              </div>
+
+              <button mat-raised-button color="accent">UPDATE</button>
+            </form>
+
+            <br /><br />
+            <h2>FAQs</h2>
+            <br /><br />
+            <p>
+              <b
+                >1. What happens when I update my email address (or mobile
+                number)?</b
+              >
+            </p>
+            <br />
+            <p>
+              Your login email id (or mobile number) changes, likewise. You'll
+              receive all your account related communication on your updated
+              email address (or mobile number).
+            </p>
+            <br /><br /><br />
+
+            <p>
+              <b
+                >2. When will my SHOPPER account be updated with the new email
+                address (or mobile number)?</b
+              >
+            </p>
+            <br />
+            <p>
+              It happens as soon as you confirm the verification code sent to
+              your email (or mobile) and save the changes.
+            </p>
+            <br /><br /><br />
+
+            <p>
+              <b
+                >3. What happens to my existing SHOPPER account when I update my
+                email address (or mobile number)?</b
+              >
+            </p>
+            <br />
+            <p>
+              Updating your email address (or mobile number) doesn't invalidate
+              your account. Your account remains fully functional. You'll
+              continue seeing your Order history, saved information and personal
+              details.
+            </p>
+            <br /><br /><br />
+
+            <p>
+              <b
+                >4. Does my Seller account get affected when I update my email
+                address?</b
+              >
+            </p>
+            <br />
+            <p>
+              SHOPPER has a 'single sign-on' policy. Any changes will reflect in
+              your Seller account also.
+            </p>
+            <br /><br />
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
